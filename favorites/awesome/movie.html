@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+        <script src="../../js/vue.global.prod.js"></script>
+        <link rel="stylesheet" href="../../css/style.css" />
+        <title>Movie | 阿源的收藏夹</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="head">
+                <div class="head_title">
+                    <h1>Movie</h1>
+                </div>
+            </div>
+            <div class="body">
+                <h2>国产</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 3em;">年份</th>
+                            <th>名称</th>
+                            <th>导演</th>
+                            <th style="width: 2em;">评分</th>
+                            <th style="width: 2em;">资源</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2010</td>
+                            <td><a href="https://movie.douban.com/subject/3742360/" target="_blank"><b>让子弹飞</b></a></td>
+                            <td>姜文</td>
+                            <td><div class="star"><img src="../../icon/star-s-fill.svg"></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2015</td>
+                            <td><a href="https://movie.douban.com/subject/25964071/" target="_blank"><b>夏洛特烦恼</b></a></td>
+                            <td>闫非 / 彭大魔</td>
+                            <td class="center">7</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td><a href="https://movie.douban.com/subject/27605698/" target="_blank"><b>西虹市首富</b></a></td>
+                            <td>闫非 / 彭大魔</td>
+                            <td class="center">7</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td><a href="https://movie.douban.com/subject/26752088/" target="_blank"><b>我不是药神</b></a></td>
+                            <td>文牧野</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td><a href="https://movie.douban.com/subject/24745500/" target="_blank"><b>绣春刀</b></a></td>
+                            <td>路阳</td>
+                            <td class="center">7</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td><a href="https://movie.douban.com/subject/26709258/" target="_blank"><b>罗小黑战记</b></a></td>
+                            <td>木头</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td><a href="https://movie.douban.com/subject/26266893/" target="_blank"><b>流浪地球</b></a></td>
+                            <td>郭帆</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td><a href="https://movie.douban.com/subject/34841067/" target="_blank"><b>你好，李焕英</b></a></td>
+                            <td>贾玲</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td><a href="https://movie.douban.com/subject/35267208/" target="_blank"><b>流浪地球2</b></a></td>
+                            <td>郭帆</td>
+                            <td class="center">10</td>
+                            <td></td>
+                        </tr>
+                        <!-- tr>td+(td>a>b)+td*3 -->
+                    </tbody>
+                </table>
+                <h2>日本</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 3em;">年份</th>
+                            <th>名称</th>
+                            <th>导演</th>
+                            <th style="width: 2em;">评分</th>
+                            <th style="width: 2em;">资源</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1986</td>
+                            <td><a href="https://movie.douban.com/subject/1291583/" target="_blank"><b>天空之城 <span class="name">天空の城ラピュタ</span></b></a></td>
+                            <td>宫崎骏</td>
+                            <td><div class="star"><img src="../../icon/star-s-fill.svg"></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1999</td>
+                            <td><a href="https://movie.douban.com/subject/1293359/" target="_blank"><b>菊次郎的夏天 <span class="name">菊次郎の夏</span></b></a></td>
+                            <td>北野武</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2000</td>
+                            <td><a href="https://movie.douban.com/subject/1292444/" target="_blank"><b>大逃杀 <span class="name">バトル・ロワイアル</span></b></a></td>
+                            <td>深作欣二</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2001</td>
+                            <td><a href="https://movie.douban.com/subject/1291561/" target="_blank"><b>千与千寻 <span class="name">千と千尋の神隠し</span></b></a></td>
+                            <td>宫崎骏</td>
+                            <td><div class="star"><img src="../../icon/star-s-fill.svg"></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2007</td>
+                            <td><a href="https://movie.douban.com/subject/2043546/" target="_blank"><b>秒速5厘米 <span class="name">秒速5センチメートル</span></b></a></td>
+                            <td>新海诚</td>
+                            <td></td>
+                            <td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td>
+                        </tr>
+                        <tr>
+                            <td>2010</td>
+                            <td><a href="https://movie.douban.com/subject/4268598/" target="_blank"><b>告白 <span class="name">告白</span></b></a></td>
+                            <td>中岛哲也</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2015</td>
+                            <td><a href="https://movie.douban.com/subject/26259677/" target="_blank"><b>垫底辣妹 <span class="name">ビリギャル</span></b></a></td>
+                            <td>土井裕泰</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td><a href="https://movie.douban.com/subject/26683290/" target="_blank"><b>你的名字。 <span class="name">君の名は。</span></b></a></td>
+                            <td>新海诚</td>
+                            <td><div class="star"><img src="../../icon/star-s-fill.svg"></div></td>
+                            <td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td><a href="https://movie.douban.com/subject/27622447/" target="_blank"><b>小偷家族 <span class="name">万引き家族</span></b></a></td>
+                            <td>是枝裕和</td>
+                            <td class="center">7</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td><a href="https://movie.douban.com/subject/30402296/" target="_blank"><b>天气之子 <span class="name">天気の子</span></b></a></td>
+                            <td>新海诚</td>
+                            <td><div class="star"><img src="../../icon/heart-3-fill.svg"></div></td>
+                            <td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td><a href="https://movie.douban.com/subject/35371261/" target="_blank"><b>铃芽之旅 <span class="name">すずめの戸締まり</span></b></a></td>
+                            <td>新海诚</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td><a href="https://movie.douban.com/subject/27199894/" target="_blank"><b>超级马力欧兄弟大电影 <span class="name">The Super Mario Bros. Movie</span></b></a></td>
+                            <td>亚伦·霍瓦斯 / 迈克尔·杰勒尼克</td>
+                            <td class="center">10</td>
+                            <td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td>
+                        </tr>
+                        <!-- tr>td+(td>a>b)+td*3 -->
+                    </tbody>
+                </table>
+                <h2>欧美</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 3em;">年份</th>
+                            <th>名称</th>
+                            <th>导演</th>
+                            <th style="width: 2em;">评分</th>
+                            <th style="width: 2em;">资源</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1972</td>
+                            <td><a href="https://movie.douban.com/subject/1291841/" target="_blank"><b>教父 <span class="name">The Godfather</span></b></a></td>
+                            <td>弗朗西斯·福特·科波拉</td>
+                            <td><div class="star"><img src="../../icon/star-s-fill.svg"></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1994</td>
+                            <td><a href="https://movie.douban.com/subject/1292720/" target="_blank"><b>阿甘正传 <span class="name">Forrest Gump</span></b></a></td>
+                            <td>罗伯特·泽米吉斯</td>
+                            <td><div class="star"><img src="../../icon/star-s-fill.svg"></div></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1997</td>
+                            <td><a href="https://movie.douban.com/subject/1292722/" target="_blank"><b>泰坦尼克号 <span class="name">Titanic</span></b></a></td>
+                            <td>詹姆斯·卡梅隆</td>
+                            <td><div class="star"><img src="../../icon/star-s-fill.svg"></div></td>
+                            <td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td>
+                        </tr>
+                        <tr>
+                            <td>1997</td>
+                            <td><a href="https://movie.douban.com/subject/1301445/" target="_blank"><b>黑衣人 <span class="name">Men in Black</span></b></a></td>
+                            <td>巴里·索南菲尔德</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1999</td>
+                            <td><a href="https://movie.douban.com/subject/1291843/" target="_blank"><b>黑客帝国 <span class="name">The Matrix</span></b></a></td>
+                            <td>莉莉·沃卓斯基 / 拉娜·沃卓斯基</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2005</td>
+                            <td><a href="https://movie.douban.com/subject/1309069/" target="_blank"><b>蝙蝠侠：侠影之谜 <span class="name">Batman Begins</span></b></a></td>
+                            <td>克里斯托弗·诺兰</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2008</td>
+                            <td><a href="https://movie.douban.com/subject/1851857/" target="_blank"><b>蝙蝠侠：黑暗骑士 <span class="name">The Dark Knight</span></b></a></td>
+                            <td>克里斯托弗·诺兰</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2010</td>
+                            <td><a href="https://movie.douban.com/subject/3541415/" target="_blank"><b>盗梦空间 <span class="name">Inception</span></b></a></td>
+                            <td>克里斯托弗·诺兰</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2012</td>
+                            <td><a href="https://movie.douban.com/subject/3395373/" target="_blank"><b>蝙蝠侠：黑暗骑士崛起 <span class="name">The Dark Knight Rises</span></b></a></td>
+                            <td>克里斯托弗·诺兰</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td><a href="https://movie.douban.com/subject/25662329/" target="_blank"><b>疯狂动物城 <span class="name">Zootopia</span></b></a></td>
+                            <td>拜伦·霍华德 / 瑞奇·摩尔 / 杰拉德·布什</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td><a href="https://movie.douban.com/subject/4920389/" target="_blank"><b>头号玩家 <span class="name">Ready Player One</span></b></a></td>
+                            <td>史蒂文·斯皮尔伯格</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td><a href="https://movie.douban.com/subject/26374197/" target="_blank"><b>蜘蛛侠：平行宇宙 <span class="name">Spider-Man: Into the Spider-Verse</span></b></a></td>
+                            <td>鲍勃·佩尔西凯蒂 / 彼得·拉姆齐 / 罗德尼·罗斯曼</td>
+                            <td class="center">9</td>
+                            <td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td><a href="https://movie.douban.com/subject/26835471/" target="_blank"><b>大侦探皮卡丘 <span class="name">Pokémon Detective Pikachu</span></b></a></td>
+                            <td>罗伯·莱特曼</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td><a href="https://movie.douban.com/subject/27119724/" target="_blank"><b>小丑 <span class="name">Joker</span></b></a></td>
+                            <td>托德·菲利普斯</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td><a href="https://movie.douban.com/subject/30337388/" target="_blank"><b>失控玩家 <span class="name">Free Guy</span></b></a></td>
+                            <td>肖恩·利维</td>
+                            <td class="center">9</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td><a href="https://movie.douban.com/subject/35076714/" target="_blank"><b>扎克·施奈德版正义联盟 <span class="name">Zack Snyder's Justice League</span></b></a></td>
+                            <td>扎克·施奈德</td>
+                            <td class="center">8</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td><a href="https://movie.douban.com/subject/30391186/" target="_blank"><b>蜘蛛侠：纵横宇宙 <span class="name">Spider-Man: Across the Spider-Verse</span></b></a></td>
+                            <td>乔伊姆·多斯·桑托斯 / 凯普·鲍尔斯 / 贾斯汀·汤普森</td>
+                            <td class="center">10</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td><a href="https://movie.douban.com/subject/26584673/" target="_blank"><b>龙与地下城：侠盗荣耀 <span class="name">Dungeons & Dragons: Honor Among Thieves</span></b></a></td>
+                            <td>约翰·弗朗西斯·戴利 / 乔纳森·戈尔茨坦</td>
+                            <td class="center">8</td>
+                            <td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td>
+                        </tr>
+                        <!-- tr>td+(td>a>b)+td*3 -->
+                    </tbody>
+                </table>
+                <h2>漫威电影宇宙</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 3em;">年份</th>
+                            <th>名称</th>
+                            <th style="width: 2em;">资源</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="3" style="text-align: center;">第一阶段</td></tr>
+                        <tr><td>2008</td><td>钢铁侠</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2008</td><td>无敌浩克</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2010</td><td>钢铁侠2</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2011</td><td>雷神</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2011</td><td>美国队长：复仇者先锋</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td colspan="3" style="text-align: center;">第二阶段</td></tr>
+                        <tr><td>2012</td><td>复仇者联盟</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2013</td><td>钢铁侠3</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2013</td><td>雷神2：黑暗世界</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2014</td><td>美国队长2：冬日战士</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2014</td><td>银河护卫队</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2015</td><td>复仇者联盟2：奥创纪元</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2015</td><td>蚁人</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td colspan="3" style="text-align: center;">第三阶段</td></tr>
+                        <tr><td>2016</td><td>美国队长3：内战</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2016</td><td>奇异博士</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2017</td><td>银河护卫队2</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2017</td><td>蜘蛛侠：英雄归来</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2017</td><td>雷神3：诸神黄昏</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2018</td><td>黑豹</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2018</td><td>复仇者联盟3：无限战争</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2018</td><td>蚁人2：黄蜂女现身</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2019</td><td>惊奇队长</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2019</td><td>复仇者联盟4：终局之战</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2019</td><td>蜘蛛侠：英雄远征</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td colspan="3" style="text-align: center;">第四阶段</td></tr>
+                        <tr><td>2021</td><td>黑寡妇</td><td></td></tr>
+                        <tr><td>2021</td><td>尚气与十环传奇</td><td></td></tr>
+                        <tr><td>2021</td><td>永恒族</td><td></td></tr>
+                        <tr><td>2021</td><td>蜘蛛侠：英雄无归</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2022</td><td>奇异博士2：疯狂多元宇宙</td><td></td></tr>
+                        <tr><td>2022</td><td>雷神4：爱与雷霆</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2022</td><td>黑豹2：瓦坎达万岁</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td colspan="3" style="text-align: center;">第五阶段</td></tr>
+                        <tr><td>2023</td><td>蚁人与黄蜂女：量子狂潮</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr><td>2023</td><td>银河护卫队3</td><td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td></tr>
+                        <tr style="color: #999;"><td>2023</td><td>惊奇队长2</td><td></td></tr>
+                        <tr style="color: #999;"><td>2024</td><td>美国队长4：新世界秩序</td><td></td></tr>
+                        <tr style="color: #999;"><td>2024</td><td>雷霆特工队</td><td></td></tr>
+                        <tr style="color: #999;"><td>2024</td><td>刀锋战士</td><td></td></tr>
+                        <tr style="color: #999;"><td>2024</td><td>死侍3</td><td></td></tr>
+                        <tr style="color: #999;"><td colspan="3" style="text-align: center;">第六阶段</td></tr>
+                        <tr style="color: #999;"><td>2025</td><td>神奇四侠</td><td></td></tr>
+                        <tr style="color: #999;"><td>2025</td><td>复仇者联盟5：康之王朝</td><td></td></tr>
+                        <tr style="color: #999;"><td>2026</td><td>复仇者联盟6：秘密战争</td><td></td></tr>
+                    </tbody>
+                </table>
+                <div class="toolkit_flex" style="max-width: 1000px; margin-top: 1em;font-size: 0.8em;">
+                    评分仅代表个人喜好，不具有任何参考价值。
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </body>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {}
+            },
+            methods: {},
+        }).mount("#app")
+    </script>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+        <script src="../../js/vue.global.prod.js"></script>
+        <link rel="stylesheet" href="../../css/style.css" />
+        <title>Anime | 阿源的收藏夹</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="head">
+                <div class="head_title">
+                    <h1>Anime</h1>
+                </div>
+            </div>
+            <h2>正在追番</h2>
+            <div class="toolkit_card">
+                <div class="toolkit_flex" style="max-width: 1200px;">
+                    <!-- a[target="_blank"]>div.anime>(div.anime_img>div.anime_days+img)+p.anime_name+(div.anime_container>div.anime_rate[style="width: 0%;"]+{0/12})*1 -->
+                    <a href="https://bgm.tv/subject/401783" target="_blank">
+                        <div class="anime">
+                            <div class="anime_img">
+                                <div class="anime_days">五</div>
+                                <img src="https://lain.bgm.tv/pic/cover/l/83/14/401783_Q3m8a.jpg" alt="">
+                            </div>
+                            <p class="anime_name">租借女友 第三季</p>
+                            <div class="anime_container">
+                                <div class="anime_rate" style="width: 0%;"></div>
+                                0/12
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://bgm.tv/subject/425236" target="_blank">
+                        <div class="anime">
+                            <div class="anime_img">
+                                <div class="anime_days">六</div>
+                                <img src="https://lain.bgm.tv/r/400/pic/cover/l/bb/bf/425236_3CtyP.jpg">
+                            </div>
+                            <p class="anime_name">莱莎的炼金工房 ～常暗女王与秘密藏身处～</p>
+                            <div class="anime_container"><div class="anime_rate" style="width: 16%;"></div>2/12</div>
+                        </div>
+                    </a>
+                    <a href="https://bgm.tv/subject/414461" target="_blank">
+                        <div class="anime">
+                            <div class="anime_img">
+                                <div class="anime_days">日</div>
+                                <img src="https://lain.bgm.tv/pic/cover/l/c0/fe/414461_Shy9T.jpg">
+                            </div>
+                            <p class="anime_name">僵尸百分百～在成为僵尸前要做的100件事～</p>
+                            <div class="anime_container">
+                                <div class="anime_rate" style="width: 10%;"></div>2/12</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolkit_flex" style="max-width: 1200px;">
+                    <a href="https://bgm.tv/subject/408351" target="_blank">
+                        <div class="anime">
+                            <div class="anime_img">
+                                <div class="anime_days">一</div>
+                                <img src="https://lain.bgm.tv/r/400/pic/cover/l/34/17/408351_R44A4.jpg">
+                            </div>
+                            <p class="anime_name">满怀美梦的少年是现实主义者</p>
+                            <div class="anime_container">
+                                <div class="anime_rate" style="width: 0%;"></div>
+                                0/12
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://bgm.tv/subject/441233" target="_blank">
+                        <div class="anime">
+                            <div class="anime_img">
+                                <div class="anime_days">三</div>
+                                <img src="https://lain.bgm.tv/r/400/pic/cover/l/5a/24/441233_nJ7Do.jpg">
+                            </div>
+                            <p class="anime_name">总之就是非常可爱 女子高中篇</p>
+                            <div class="anime_container">
+                                <div class="anime_rate" style="width: 0%;"></div>
+                                0/4
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2>已看动画</h2>
+            <h3>2023</h3>
+            <div class="body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 8em;">放送时间</th>
+                            <th>名称</th>
+                            <th>标签</th>
+                            <th style="width: 2em;">评分</th>
+                            <th style="width: 2em;">资源</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- tr>td+(td>a[target="_blank"]>b>span.name)+td.tag+td.center+td -->
+                        <tr>
+                            <td>2023年4月12日</td>
+                            <td><a href="https://bgm.tv/subject/386809" target="_blank"><b>我推的孩子 <span class="name">推しの子</span></b></a></td>
+                            <td class="tag">星野爱，阿库亚，露比，有马加奈</td>
+                            <td class="center"></td>
+                            <td><div class="star"><img src="../../icon/checkbox-line.svg"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- <h3>2022</h3> -->
+            <!-- <h3>2021</h3> -->
+            <!-- <h3>2020</h3> -->
+            <!-- <h3>2019</h3> -->
+            <!-- <h3>2018</h3> -->
+            <!-- <h3>2017</h3> -->
+            <!-- <h3>2016</h3> -->
+            <!-- <h3>2015</h3> -->
+            <!-- <h3>2014</h3> -->
+            <!-- <h3>2013</h3> -->
+            <!-- <h3>2012</h3> -->
+            <!-- <h3>2011</h3> -->
+            <!-- <h3>2010</h3> -->
+            <!-- <h3>2009之前</h3> -->
+        </div>
+    </body>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {}
+            },
+            methods: {},
+        }).mount("#app")
+    </script>
+</html>

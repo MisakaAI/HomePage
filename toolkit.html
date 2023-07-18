@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+        <script src="js/vue.global.prod.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <title>阿源的工具箱</title>
+    </head>
+
+    <body>
+        <div id="app" class="toolkit">
+            <div class="head head_fixed">
+                <a href="/">
+                    <div class="head_avatar">
+                        <img src="image/13422426.png" />
+                    </div>
+                </a>
+                <div class="head_title">
+                    <h1>阿源的工具箱</h1>
+                    <p>A Yuan's Toolkit</p>
+                </div>
+            </div>
+            <h2 style="margin-top: 130px;">操作系统</h2>
+            <div class="toolkit_card">
+                <div class="toolkit_more" @click="card_show('system')" v-text="isShow.system?'Less':'More'"></div>
+                <div class="toolkit_flex">
+                    <a href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank">
+                        <div class="item" style="width: 200px; height: 80px">
+                            <div class="soft_icon" style="width: 200px; height: 80px">
+                                <img src="icon/Windows_10_Logo.svg" />
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://ubuntu.com/" target="_blank">
+                        <div class="item" style="width: 200px; height: 80px">
+                            <div class="soft_icon" style="width: 200px; height: 80px">
+                                <img src="icon/Ubuntu-logo-2022.svg" />
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://rockylinux.org/" target="_blank">
+                        <div class="item" style="width: 200px; height: 80px">
+                            <div class="soft_icon" style="width: 200px; height: 80px">
+                                <img src="icon/Rocky_Linux_wordmark.svg" />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolkit_flex" v-show="isShow.system">
+                    <a href="https://www.debian.org/" target="_blank">
+                        <div class="item" style="width: 200px; height: 80px">
+                            <div class="soft_icon" style="width: 200px; height: 80px">
+                                <img src="icon/debian.svg" />
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://archlinux.org/" target="_blank">
+                        <div class="item" style="width: 200px; height: 80px">
+                            <div class="soft_icon" style="width: 200px; height: 80px">
+                                <img src="icon/archlinux.svg" />
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.raspberrypi.com/software/" target="_blank">
+                        <div class="item" style="width: 200px; height: 80px">
+                            <div class="soft_icon" style="width: 200px; height: 80px">
+                                <img src="icon/Raspberry_Pi_OS.svg" />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2>编程语言</h2>
+            <div class="toolkit_card">
+                <div class="toolkit_flex">
+                    <a href="https://www.python.org/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Python-logo-notext.svg" />
+                            </div>
+                            <p class="soft_name">Python3</p>
+                        </div>
+                    </a>
+                    <div class="item">
+                        <div class="soft_icon">
+                            <img src="icon/html5.svg" />
+                        </div>
+                        <p class="soft_name">HTML5</p>
+                    </div>
+                    <div class="item">
+                        <div class="soft_icon">
+                            <img src="icon/css3.svg" />
+                        </div>
+                        <p class="soft_name">CSS3</p>
+                    </div>
+                    <div class="item">
+                        <div class="soft_icon">
+                            <img src="icon/JavaScript.svg" />
+                        </div>
+                        <p class="soft_name">JavaScript</p>
+                    </div>
+                    <a href="https://cn.vuejs.org/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Vue.js.svg" />
+                            </div>
+                            <p class="soft_name">Vue 3</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2>数据库</h2>
+            <div class="toolkit_card">
+                <div class="toolkit_flex">
+                    <a href="https://www.postgresql.org/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/PostgreSQL_logo.3colors.svg" />
+                            </div>
+                            <p class="soft_name">PostgreSQL</p>
+                        </div>
+                    </a>
+                    <a href="https://mariadb.org/zh/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/MariaDB.svg" />
+                            </div>
+                            <p class="soft_name">MariaDB</p>
+                        </div>
+                    </a>
+                    <a href="https://www.sqlite.org/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/SQLite370.svg" />
+                            </div>
+                            <p class="soft_name">SQLite</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2>版本控制</h2>
+            <div class="toolkit_card">
+                <div class="toolkit_flex">
+                    <a href="https://git-scm.com/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Git-logo.svg" />
+                            </div>
+                            <p class="soft_name">Git</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/MisakaAI" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/GitHub_Invertocat_Logo.svg" />
+                            </div>
+                            <p class="soft_name">GitHub</p>
+                        </div>
+                    </a>
+                    <a href="https://about.gitlab.com/install/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/GitLab.svg" />
+                            </div>
+                            <p class="soft_name">GitLab</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2>开发工具</h2>
+            <div class="toolkit_card">
+                <div class="toolkit_flex">
+                    <a href="https://code.visualstudio.com/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Visual_Studio_Code_1.35_icon.svg" />
+                            </div>
+                            <p class="soft_name">VS Code</p>
+                        </div>
+                    </a>
+                    <a href="https://www.vim.org/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Vimlogo.svg" />
+                            </div>
+                            <p class="soft_name">Vim</p>
+                        </div>
+                    </a>
+                    <a href="https://www.docker.com/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Docker.svg" />
+                            </div>
+                            <p class="soft_name">Docker</p>
+                        </div>
+                    </a>
+                    <a href="https://www.jetbrains.com/pycharm/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/PyCharm_Icon.svg" />
+                            </div>
+                            <p class="soft_name">PyCharm 社区版</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2>办公软件</h2>
+            <div class="toolkit_card">
+                <div class="toolkit_flex">
+                    <a href="https://www.microsoft.com/zh-cn/microsoft-365/word" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Microsoft_Office_Word_(2019–present).svg" />
+                            </div>
+                            <p class="soft_name">Word</p>
+                        </div>
+                    </a>
+                    <a href="https://www.microsoft.com/zh-cn/microsoft-365/excel" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Microsoft_Office_Excel_(2019–present).svg" />
+                            </div>
+                            <p class="soft_name">Excel</p>
+                        </div>
+                    </a>
+                    <a href="https://www.microsoft.com/zh-cn/microsoft-365/powerpoint" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Microsoft_Office_PowerPoint_(2019–present).svg" />
+                            </div>
+                            <p class="soft_name">PowerPoint</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolkit_flex">
+                    <a href="https://www.microsoft.com/zh-cn/microsoft-365/visio/flowchart-software" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Microsoft_Office_Visio_(2019).svg" />
+                            </div>
+                            <p class="soft_name">Visio</p>
+                        </div>
+                    </a>
+                    <a href="https://todo.microsoft.com/tasks/zh-cn/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Microsoft_To-Do_icon.svg" />
+                            </div>
+                            <p class="soft_name">To Do</p>
+                        </div>
+                    </a>
+                    <a href="https://xmind.cn/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/xmind.svg" />
+                            </div>
+                            <p class="soft_name">Xmind</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2>影像编辑</h2>
+            <div class="toolkit_card">
+                <div
+                    class="toolkit_more"
+                    @click="card_show('design')"
+                    v-text="isShow.design?'Less':'More'"
+                ></div>
+                <div class="toolkit_flex">
+                    <a href="https://www.adobe.com/cn/products/photoshop.html" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Adobe Photoshop.svg" />
+                            </div>
+                            <p class="soft_name">Photoshop</p>
+                        </div>
+                    </a>
+                    <a href="https://www.adobe.com/cn/products/illustrator.html" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Adobe Illustrator.svg" />
+                            </div>
+                            <p class="soft_name">Illustrator</p>
+                        </div>
+                    </a>
+                    <a href="https://www.adobe.com/cn/products/premiere.html" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Adobe Premiere Pro.svg" />
+                            </div>
+                            <p class="soft_name">Premiere Pro</p>
+                        </div>
+                    </a>
+                    <a href="https://www.adobe.com/cn/products/aftereffects.html" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Adobe After Effects.svg" />
+                            </div>
+                            <p class="soft_name">After Effects</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolkit_flex" v-show="isShow.design">
+                    <a href="https://www.adobe.com/cn/products/media-encoder.html" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Adobe Media Encoder.svg" />
+                            </div>
+                            <p class="soft_name">Media Encoder</p>
+                        </div>
+                    </a>
+                    <a href="https://www.adobe.com/cn/products/audition.html" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Adobe Audition.svg" />
+                            </div>
+                            <p class="soft_name">Audition</p>
+                        </div>
+                    </a>
+                    <a href="http://www.blackmagicdesign.com/cn/products/davinciresolve/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/DaVinci_Resolve_Studio.png" />
+                            </div>
+                            <p class="soft_name">DaVinci Resolve</p>
+                        </div>
+                    </a>
+                    <a href="https://www.capcut.cn/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/capcut.svg" />
+                            </div>
+                            <p class="soft_name">剪映</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2>游戏平台</h2>
+            <div class="toolkit_card">
+                <div class="toolkit_flex">
+                    <a href="https://store.steampowered.com/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Steam_icon_logo.svg" />
+                            </div>
+                            <p class="soft_name">Steam</p>
+                        </div>
+                    </a>
+                    <a href="https://www.nintendo.com.hk/hardware/switch/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/NintendoSwitchLogo.svg" />
+                            </div>
+                            <p class="soft_name">Nintendo Switch</p>
+                        </div>
+                    </a>
+                    <a href="https://www.xbox.com/zh-HK" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/Xbox_Series_X_S_color.svg" />
+                            </div>
+                            <p class="soft_name">Xbox Series X</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <h2>其他工具</h2>
+            <div class="toolkit_card" style="padding-bottom: 50px;">
+                <div class="toolkit_flex">
+                    <a href="https://obsproject.com/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/OBS_Studio_Logo.svg" />
+                            </div>
+                            <p class="soft_name">OBS Studio</p>
+                        </div>
+                    </a>
+                    <a href="https://chat.openai.com/" target="_blank">
+                        <div class="item">
+                            <div class="soft_icon">
+                                <img src="icon/ChatGPT_logo.svg" />
+                            </div>
+                            <p class="soft_name">ChatGPT</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    isShow: {
+                        system: false,
+                        design: false,
+                    },
+                }
+            },
+            methods: {
+                card_show(event) {
+                    this.isShow[event] = !this.isShow[event]
+                },
+            },
+        }).mount("#app")
+
+        window.addEventListener("scroll", function () {
+            var headElement = document.querySelector(".head")
+            var scrollDistance = window.pageYOffset || document.documentElement.scrollTop
+            if (scrollDistance >= 100) {
+                headElement.style.backgroundColor = "rgba(255,255,255,0.8)"
+            } else {
+                headElement.style.backgroundColor = "rgba(255,255,255,0.3)"
+            }
+        })
+    </script>
+</html>

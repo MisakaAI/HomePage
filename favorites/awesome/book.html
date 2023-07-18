@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
+        <script src="../../js/vue.global.prod.js"></script>
+        <link rel="stylesheet" href="../../css/style.css" />
+        <title>Book | 阿源的收藏夹</title>
+        <style>
+            .now { color: #c1272d !important;}
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="head">
+                <div class="head_title">
+                    <h1>Book</h1>
+                </div>
+            </div>
+            <div class="body">
+                <h2>计算机</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>出版社</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- tr>td+(td>b)+td*2+td{0%} -->
+                        <tr>
+                            <td>Git</td>
+                            <td><a href="https://item.jd.com/13047666.html" title="ISBN：9787312050077" target="_blank"><b>《跟Wakaba酱一起学Git使用》</b></a></td>
+                            <td>[日] 凑川爱</td>
+                            <td>中国科学技术大学出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">SQL</td>
+                            <td><a href="https://item.jd.com/12212242.html" title="ISBN：9787115455024" target="_blank"><b>《SQL基础教程》（第2版）</b></a></td>
+                            <td>[日] MICK</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12245735.html" title="ISBN：9787115470522" target="_blank"><b>《SQL进阶教程》</b></a></td>
+                            <td>[日] MICK</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>Vim</td>
+                            <td><a href="https://item.jd.com/12056490.html" title="ISBN：9787115427861" target="_blank"><b>《Vim实用技巧》(第2版)</b></a></td>
+                            <td>[英] Drew Neil</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Python</td>
+                            <td><a href="https://item.jd.com/11349023.html" title="ISBN：9787115333742" target="_blank"><b>《Python编程入门》（第二版）</b></a></td>
+                            <td>[加] Toby Donaldson</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12717433.html" title="ISBN：9787115005281" target="_blank"><b>《笨办法学Python 3》</b></a></td>
+                            <td>[美] Zed A. Shaw</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/13527222.html" title="ISBN：9787115577092" target="_blank"><b>《Python3网络爬虫开发实战》（第2版）</b></a></td>
+                            <td>崔庆才</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/13832020.html" title="ISBN：9787115474810" target="_blank"><b>《Python神经网络编程》</b></a></td>
+                            <td>[英] Tariq Rashid</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="6">Linux</td>
+                            <td><a href="https://item.jd.com/10100237.html" title="ISBN：9787508353944" target="_blank"><b>《深入理解LINUX内核》（第3版）</b></a></td>
+                            <td>[美] Daniel P. Bovet<br>[美] Marco Cesati</td>
+                            <td>中国电力出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/13102226.html" title="ISBN：9787115551436" target="_blank"><b>《Linux命令行大全》</b></a></td>
+                            <td>[美] William Shotts</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/10064429.html" title="ISBN：9787115226266" target="_blank"><b>《鸟哥的Linux私房菜（基础学习篇）》</b></a></td>
+                            <td>鸟哥</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/11018248.html" title="ISBN：9787111384991" target="_blank"><b>《鸟哥的Linux私房菜（服务器架设篇）》</b></a></td>
+                            <td>鸟哥</td>
+                            <td>机械工业出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/10036483560935.html" title="ISBN：9787115570116" target="_blank"><b>《Linux就该这么学》</b></a></td>
+                            <td>刘遄</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12267548.html" title="ISBN：9787111477877" target="_blank"><b>《构建高可用Linux服务器》</b></a></td>
+                            <td>余洪春</td>
+                            <td>机械工业出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">基础</td>
+                            <td><a href="https://item.jd.com/12219883.html" title="ISBN：9787121302954" target="_blank"><b>《计算机网络》（第7版） </b></a></td>
+                            <td>谢希仁</td>
+                            <td>电子工业出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12894579.html" title="ISBN：9787302147510" target="_blank"><b>《数据结构（C语言版）》</b></a></td>
+                            <td>严蔚敏 吴伟民</td>
+                            <td>清华大学出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12394660.html" title="ISBN：9787560633503" target="_blank"><b>《计算机操作系统》(第四版)</b></a></td>
+                            <td>汤小丹</td>
+                            <td>西安电子科技大学出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12271404.html" title="ISBN：9787040223903" target="_blank"><b>《计算机组成原理》（第2版）</b></a></td>
+                            <td>唐朔飞</td>
+                            <td>高等教育出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>算法</td>
+                            <td><a href="https://item.jd.com/11144230.html" title="ISBN：9787111407010" target="_blank"><b>《算法导论》（原书第3版）</b></a></td>
+                            <td>[美] Thomas H.Cormen<br>[美] Charles E.Leiserson<br>[美] Ronald L.Rivest<br>[美] Clifford Stein </td>
+                            <td>机械工业出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>数学</td>
+                            <td><a href="https://item.jd.com/12646983.html" title="ISBN：9787115537973" target="_blank"><b>《数学之美》（第三版）</b></a></td>
+                            <td>吴军</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td><a href="https://item.jd.com/12627795.html" title="ISBN：9787115521637" target="_blank"><b>《C Primer Plus》</b></a></td>
+                            <td>[美] Stephen Prata</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>C++</td>
+                            <td><a href="https://item.jd.com/12908688.html" title="ISBN：9787115521644" target="_blank"><b>《C++ Primer Plus》</b></a></td>
+                            <td>[美] Stephen Prata</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>JS</td>
+                            <td><a href="https://item.jd.com/13307998.html" title="ISBN：9787302566625" target="_blank"><b>《JavaScript百炼成仙》</b></a></td>
+                            <td>杨逸飞</td>
+                            <td>清华大学出版社</td>
+                            <td>0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>游戏开发</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>出版社</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>教材</td>
+                            <td><a href="https://item.jd.com/12036824.html" title="ISBN：9787115426888" target="_blank"><b>《游戏编程模式》</b></a></td>
+                            <td>[美] Robert Nystrom</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>教材</td>
+                            <td><a href="https://item.jd.com/12851117.html" title="ISBN：9787121409271" target="_blank"><b>《游戏设计艺术》（第3版）</b></a></td>
+                            <td>[美] Jesse Schell</td>
+                            <td>电子工业出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>教材</td>
+                            <td><a href="https://item.jd.com/12831594.html" title="ISBN：9787115525758" target="_blank"><b>《游戏开发 世嘉新人培训教材》</b></a></td>
+                            <td>[日] 平山尚</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>设定集</td>
+                            <td><a href="https://item.jd.com/13449174.html" title="ISBN：9787513342483" target="_blank"><b>《赛博朋克2077的世界》</b></a></td>
+                            <td>[波] 马丁·巴蒂尔达</td>
+                            <td>新星出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>其他</td>
+                            <td><a href="https://book.douban.com/subject/26756898/" title="ISBN：9789863771715" target="_blank"><b>《奇幻世界藝術&RPG地圖繪製講座》</b></a></td>
+                            <td>Jared Blando</td>
+                            <td>楓書坊</td>
+                            <td>0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>人物传记</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>出版社</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>他传</td>
+                            <td><a href="https://item.jd.com/10035972721678.html" title="ISBN：9787532736553" target="_blank"><b>《他改变了中国》</b></a></td>
+                            <td>[美] Robert Lawrence Kuhn</td>
+                            <td>上海译文出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>自传</td>
+                            <td><a href="https://item.jd.com/13659593.html" title="ISBN：9787115608079" target="_blank"><b>《只是为了好玩》</b></a></td>
+                            <td>[美] Linus Torvalds<br>[美] David Diamond</td>
+                            <td>人民邮电出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>他传</td>
+                            <td><a href="https://item.jd.com/13860056.html" title="ISBN：9787521752236" target="_blank"><b>《史蒂夫·乔布斯传》</b></a></td>
+                            <td>[美] Walter Isaacson</td>
+                            <td>中信出版集团</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>他传</td>
+                            <td><a href="https://item.jd.com/12884551.html" title="ISBN：9787544787581" target="_blank"><b>《岩田先生》</b></a></td>
+                            <td>[日] HOBO日刊ITOI新闻</td>
+                            <td>译林出版社</td>
+                            <td>0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>语言学习</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>出版社</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">日语</td>
+                            <td><a href="https://item.jd.com/12253721.html" title="ISBN：9789900331889" target="_blank"><b>《大家的日语 初级1》</b></a></td>
+                            <td>-</td>
+                            <td>外语教学与研究出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12253705.html" title="ISBN：9789900331896" target="_blank"><b>《大家的日语 初级2》</b></a></td>
+                            <td>-</td>
+                            <td>外语教学与研究出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>英语</td>
+                            <td><a href="https://item.jd.com/13270213.html" title="ISBN：9787521336702" target="_blank"><b>《新概念英语1》</b></a></td>
+                            <td>-</td>
+                            <td>外语教学与研究出版社</td>
+                            <td>0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>艺术设计</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>出版社</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4">三大构成</td>
+                            <td><a href="https://item.jd.com/12382895.html" title="ISBN：9787553788074" target="_blank"><b>《艺术·设计的平面构成》</b></a></td>
+                            <td>[日] 朝仓直巳</td>
+                            <td>江苏凤凰科学技术出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12416215.html" title="ISBN：9787553792293" target="_blank"><b>《艺术·设计的色彩构成》</b></a></td>
+                            <td>[日] 朝仓直巳</td>
+                            <td>江苏凤凰科学技术出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12467812.html" title="ISBN：9787553796062" target="_blank"><b>《艺术·设计的立体构成》</b></a></td>
+                            <td>[日] 朝仓直巳</td>
+                            <td>江苏凤凰科学技术出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://item.jd.com/12373178.html" title="ISBN：9787553789996" target="_blank"><b>《艺术·设计的光迹构成》</b></a></td>
+                            <td>[日] 朝仓直巳</td>
+                            <td>江苏凤凰科学技术出版社</td>
+                            <td>0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>文学</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>出版社</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>推理</td>
+                            <td><a href="https://item.jd.com/12623593.html" title="ISBN：9787540494247" target="_blank"><b>《告白》</b></a></td>
+                            <td>[日] 湊佳苗</td>
+                            <td>湖南文艺出版社</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>科幻</td>
+                            <td><a href="https://item.jd.com/13541419.html" title="ISBN：9787229166922" target="_blank"><b>《三体 地球往事》</b></a></td>
+                            <td>刘慈欣</td>
+                            <td>重庆出版社</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>科幻</td>
+                            <td><a href="https://item.jd.com/13541427.html" title="ISBN：9787229166908" target="_blank"><b>《三体 黑暗森林》</b></a></td>
+                            <td>刘慈欣</td>
+                            <td>重庆出版社</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td>科幻</td>
+                            <td><a href="https://item.jd.com/13541501.html" title="ISBN：9787229166915" target="_blank"><b>《三体 死神永生》</b></a></td>
+                            <td>刘慈欣</td>
+                            <td>重庆出版社</td>
+                            <td>100%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>其他（一）</h2>
+                <p>一些不知道怎么分类的图书。</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>出版社</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>其他</td>
+                            <td><a href="https://item.jd.com/12249399.html" title="ISBN：9787514219531" target="_blank"><b>《小说创作基本技巧：从计划到出版》</b></a></td>
+                            <td>[英] 琳恩·巴瑞特-李</td>
+                            <td>文化发展出版社</td>
+                            <td>0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>其他（二）</h2>
+                <p>摆在书柜里，假装自己是文化人，但是可能都不会拆塑封的书。</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>出版社</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>文学</td>
+                            <td><a href="https://item.jd.com/12152685.html" title="ISBN：9787544291170" target="_blank"><b>《百年孤独》</b></a></td>
+                            <td>[哥伦比亚] 加西亚·马尔克斯</td>
+                            <td>南海出版公司</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>心理学</td>
+                            <td><a href="https://item.jd.com/12499606.html" title="ISBN：9787505745681" target="_blank"><b>《乌合之众》</b></a></td>
+                            <td>[法] 古斯塔夫·勒庞</td>
+                            <td>中国友谊出版公司</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>心理学</td>
+                            <td><a href="https://item.jd.com/12026441.html" title="ISBN：9787505737488" target="_blank"><b>《自卑与超越》</b></a></td>
+                            <td>[奥地利] 阿尔弗雷德·阿德勒</td>
+                            <td>中国友谊出版公司</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>管理学</td>
+                            <td><a href="https://item.jd.com/13498550.html" title="ISBN：9787559656438" target="_blank"><b>《影响力》</b></a></td>
+                            <td>[美] 罗伯特·西奥迪尼</td>
+                            <td>北京联合出版公司</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>心理学</td>
+                            <td><a href="https://item.jd.com/13647583.html" title="ISBN：9787559620125" target="_blank"><b>《天才在左，疯子在右》</b></a></td>
+                            <td>高铭</td>
+                            <td>北京联合出版公司</td>
+                            <td>0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>轻小说</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>书名</th>
+                            <th>作者</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>魔法禁书目录</b></td>
+                            <td>镰池和马</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><b>我的青春恋爱物语果然有问题。</b></td>
+                            <td>渡航</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><b>青春猪头少年系列</b></td>
+                            <td>鴨志田一</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><b>刀剑神域</b></td>
+                            <td>川原砾</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><b>加速世界</b></td>
+                            <td>川原砾</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><b>凉宫春日系列</b></td>
+                            <td>谷川流</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><b>迷茫管家与懦弱的我</b></td>
+                            <td>朝野始</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><b>我的朋友很少</b></td>
+                            <td>平坂读</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><b>我的妹妹不可能这么可爱</b></td>
+                            <td>伏见司</td>
+                            <td>0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>网络小说</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>书名</th>
+                            <th>状态</th>
+                            <th>作者</th>
+                            <th>阅读进度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/174075/" target="_blank"><b>史上第一混乱</b></a></td>
+                            <td>完本</td>
+                            <td>张小花</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1330991/" target="_blank"><b>我就是妖怪</b></a></td>
+                            <td>完本</td>
+                            <td>张小花</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1843326/" target="_blank"><b>史上第一混搭</b></a></td>
+                            <td>完本</td>
+                            <td>张小花</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1001757801/" target="_blank"><b>铁掌无敌王小军</b></a></td>
+                            <td>完本</td>
+                            <td>张小花</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><b>维纳斯之爱</b></td>
+                            <td>太监</td>
+                            <td>张小花</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1887208/" target="_blank"><b>全职高手</b></a></td>
+                            <td>完本</td>
+                            <td>蝴蝶蓝</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1209977/" target="_blank"><b>斗破苍穹</b></a></td>
+                            <td>完本</td>
+                            <td>天蚕土豆</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/2048120/" target="_blank"><b>武动乾坤</b></a></td>
+                            <td>完本</td>
+                            <td>天蚕土豆</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/2750457/" target="_blank"><b>大主宰</b></a></td>
+                            <td>完本</td>
+                            <td>天蚕土豆</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/3025145/" target="_blank"><b>网游之倒行逆施</b></a></td>
+                            <td>完本</td>
+                            <td>张扬的五月</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/105199/" target="_blank"><b>极品家丁</b></a></td>
+                            <td>完本</td>
+                            <td>禹岩</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/154696/" target="_blank"><b>我的美女大小姐</b></a></td>
+                            <td>完本</td>
+                            <td>李兴禹</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><b>无限作死</b></td>
+                            <td>-</td>
+                            <td>虎皮猫大人</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1017141/" target="_blank"><b>盘龙</b></a></td>
+                            <td>完本</td>
+                            <td>我吃西红柿</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/118447/" target="_blank"><b>星辰变</b></a></td>
+                            <td>完本</td>
+                            <td>我吃西红柿</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1639199/" target="_blank"><b>吞噬星空</b></a></td>
+                            <td>完本</td>
+                            <td>我吃西红柿</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><b>泡沫之夏</b></td>
+                            <td>完本</td>
+                            <td>明晓溪</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><b>全能修真者</b></td>
+                            <td>完本</td>
+                            <td>碧心轩客</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.zhulang.com/122969/" target="_blank"><b>星戒</b></a></td>
+                            <td>完本</td>
+                            <td>空神</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://dushu.baidu.com/pc/detail?gid=4356317804" target="_blank"><b>刘老六传奇</b></a></td>
+                            <td>完本</td>
+                            <td>低调的666</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/3406500/" target="_blank"><b>走进修仙</b></a></td>
+                            <td>完本</td>
+                            <td>吾道长不孤</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/3602691/" target="_blank"><b>修真聊天群</b></a></td>
+                            <td>完本</td>
+                            <td>圣骑士的传说</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1021583346/" target="_blank"><b>我真没想当训练家啊</b></a></td>
+                            <td>完本</td>
+                            <td>北川南海</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1010868264/" class="now" target="_blank"><b>诡秘之主</b></a></td>
+                            <td>完本</td>
+                            <td>爱潜水的乌贼</td>
+                            <td>49%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/2597043/" target="_blank"><b>惊悚乐园</b></a></td>
+                            <td>完本</td>
+                            <td>三天两觉</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/3347574/" target="_blank"><b>从前有座灵剑山</b></a></td>
+                            <td>完本</td>
+                            <td>国王陛下</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1003306811/" target="_blank"><b>放开那个女巫</b></a></td>
+                            <td>完本</td>
+                            <td>二目</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1016572786/" target="_blank"><b>我师兄实在太稳健了</b></a></td>
+                            <td>完本</td>
+                            <td>言归正传</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/114559/" target="_blank"><b>庆余年</b></a></td>
+                            <td>完本</td>
+                            <td>猫腻</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/107580/" target="_blank"><b>凡人修仙传</b></a></td>
+                            <td>完本</td>
+                            <td>忘语</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/109222/" target="_blank"><b>无限恐怖</b></a></td>
+                            <td>完本</td>
+                            <td>zhttty</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://book.zongheng.com/book/189169.html" target="_blank"><b>雪中悍刀行</b></a></td>
+                            <td>完本</td>
+                            <td>烽火戏诸侯</td>
+                            <td>17%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/2019/" target="_blank"><b>诛仙</b></a></td>
+                            <td>完本</td>
+                            <td>萧鼎</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><b>飘渺之旅</b></td>
+                            <td>完本</td>
+                            <td>萧潜</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/501/" target="_blank"><b>小兵传奇</b></a></td>
+                            <td>完本</td>
+                            <td>玄雨</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.jjwxc.net/onebook.php?novelid=3193259" target="_blank"><b>天才基本法</b></a></td>
+                            <td>完本</td>
+                            <td>长洱</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.jjwxc.net/onebook.php?novelid=3882143" target="_blank"><b>C语言修仙</b></a></td>
+                            <td>完本</td>
+                            <td>一十四洲</td>
+                            <td>100%</td>
+                        </tr>
+                        <tr>
+                            <td><b>炼气练了三千年</b></td>
+                            <td>完本</td>
+                            <td>精装激光雕刻机</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.qidian.com/book/1016150754/" target="_blank"><b>亏成首富从游戏开始</b></a></td>
+                            <td>完本</td>
+                            <td>青衫取醉</td>
+                            <td>100%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="toolkit_flex" style="max-width: 1000px; padding: 1em 0 2em 0;">
+                    <div style="background: #c1272d; width: 12px; height: 12px; border: solid 1px #333;"></div>
+                    <div style="margin-left: 0.5em; font-size: 0.8em; font-weight: bold;">最近阅读</div>
+                    <div style="margin-left: 1em; background: #198d44; width: 12px; height: 12px; border: solid 1px #333;"></div>
+                    <div style="margin-left: 0.5em; font-size: 0.8em; font-weight: bold;">有链接</div>
+                    <div style="margin-left: 1em; background: #333333; width: 12px; height: 12px; border: solid 1px #333;"></div>
+                    <div style="margin-left: 0.5em; font-size: 0.8em; font-weight: bold;">无链接</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {}
+            },
+            methods: {},
+        }).mount("#app")
+    </script>
+</html>
