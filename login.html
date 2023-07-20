@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="js/vue.global.prod.js"></script>
+    <title>登录 | 阿源的主页</title>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="title"><div>Misaka Network</div><div class="slogan" v-text="slogan"></div></div>
+        <div class="signin">
+            <img src="image/misakanet.png" style="width: 8em;">
+            <div class="signin_main">
+                <input type="text" id="username" v-model="username">
+                <input type="password" id="password" v-model="password" @keyup.enter="login">
+                <div class="button" @click="login">登录</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/md5.min.js"></script>
+<script>
+    const App = {
+        data() {
+            return {
+                slogan: "// 用电磁波分享世界！",
+                username: "",
+                password: "",
+                login_type: false
+            }
+        },
+        created() {
+            let sessionid = this.getCookie('sessionid')
+            if (sessionid === "26d0640b375d535395350f7b924a62d3") {
+                this.login_type = true
+                this.setCookie('sessionid', hash, 7)
+                window.location.replace("/index.html")
+            }
+        },
+        methods: {
+            getCookie(name) {
+                // 将 cookie 字符串拆分为单个 cookie
+                const cookies = document.cookie.split(';')
+                // 遍历每个 cookie
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim()
+                    if (cookie.startsWith(name + '=')) {
+                        // 返回 cookie 的值
+                        return decodeURIComponent(cookie.substring(name.length + 1));
+                    }
+                }
+                // 没有找到匹配的 cookie
+                return null
+            },
+            setCookie(name, value, expiresDays, path, domain, secure) {
+                let cookieStr = encodeURIComponent(name) + '=' + encodeURIComponent(value)
+
+                // 设置有效期
+                const expires = new Date()
+                expires.setTime(expires.getTime() + expiresDays * 24 * 60 * 60 * 1000)
+                cookieStr += '; expires=' + expires.toUTCString()
+
+                // 设置路径
+                if (path) {
+                    cookieStr += '; path=' + path;
+                }
+
+                // 设置域名
+                if (domain) {
+                    cookieStr += '; domain=' + domain;
+                }
+
+                // 设置安全标志
+                if (secure) {
+                    cookieStr += '; secure';
+                }
+
+                // 设置 cookie
+                document.cookie = cookieStr
+            },
+            login(event) {
+                var hash = md5(this.username + this.password)
+                if (hash === "26d0640b375d535395350f7b924a62d3") {
+                    this.setCookie('sessionid', hash, 7)
+                    // 跳转到登陆后页面
+                    window.location.replace("/index.html")
+                } else {
+                    this.slogan = "// 密码错误"
+                }
+            },
+        },
+    }
+    const app = Vue.createApp(App)
+    const vm = app.mount("#app")
+</script>
+
+</html>

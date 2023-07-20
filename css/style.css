@@ -52,6 +52,44 @@ img {
     align-items: center;
 }
 
+.main {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2em;
+}
+
+.main a {
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+    margin: 10px;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+.main a:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+
+.main svg {
+    width: 1em;
+}
+
 .head {
     width: 100%;
     background-color: rgba(255,255,255,0.3);
