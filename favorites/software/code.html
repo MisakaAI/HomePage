@@ -4,23 +4,84 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
-        <script src="js/vue.global.prod.js"></script>
-        <link rel="stylesheet" href="css/style.css" />
-        <title></title>
+        <script src="../../js/vue.global.prod.js"></script>
+        <link rel="stylesheet" href="../../css/style.css" />
+        <title>Code | 阿源的收藏夹</title>
     </head>
 
     <body>
         <div id="app">
+            <div class="head">
+                <div class="head_title">
+                    <h1>Code</h1>
+                </div>
+            </div>
+            <div class="flex_row_wrap">
+                <div class="list">
+                <h3>语言</h3>
+                <ul>
+                    <li><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"><b>Python3</b></a></li>
+                    <li>C / C++</li>
+                    <ul>
+                        <li><a href="http://cygwin.com/install.html" target="_blank" rel="noopener noreferrer">Cygwin</a></li>
+                        <li><a href="https://mingw-w64.org/" target="_blank" rel="noopener noreferrer">Mingw-w64</a></li>
+                    </ul>
+                    <li><a href="https://www.java.com/zh-CN/" target="_blank" rel="noopener noreferrer">Java</a></li>
+                    <li><a href="https://openjdk.org/" target="_blank" rel="noopener noreferrer">OpenJDK</a></li>
+                    <li>JavaScript</li>
+                    <ul>
+                        <li><a href="https://cn.vuejs.org/" target="_blank" rel="noopener noreferrer">Vue.Js <span class="name">渐进式 JavaScript 框架</span></a></li>
+                        <ul>
+                            <li><a href="https://element-plus.gitee.io/zh-CN/" target="_blank" rel="noopener noreferrer">Element Plus <span class="name">Vue 3 UI 框架</span></a></li>
+                        </ul>
+                        <li><a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">Next.js <span class="name">React Web 框架</span></a></li>
+                        <li><a href="https://www.chartjs.org/docs/latest/" target="_blank" rel="noopener noreferrer">Chart.js <span class="name">图表工具</span></a></li>
+                        <li><a href="https://threejs.org/" target="_blank" rel="noopener noreferrer">Three.js <span class="name">3D WebGL库</span></a></li>
+                    </ul>
+                    <li><a href="https://www.php.net/" target="_blank" rel="noopener noreferrer">PHP</a></li>
+                    <li><a href="https://go.dev/" target="_blank" rel="noopener noreferrer">Go</a></li>
+                    <li>SQL</li>
+                </ul>
+                </div>
+                <div class="list">
+                    <h3>编辑器</h3>
+                    <ul>
+                        <li><a href="https://www.vim.org/" target="_blank" rel="noopener noreferrer">Vim</a></li>
+                        <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a></li>
+                        <li><a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener noreferrer">PyCharm</a></li>
+                    </ul>
+                    <h3>数据库</h3>
+                    <ul>
+                        <li><a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">PostgreSQL</a></li>
+                        <li><a href="https://mariadb.org/zh/" target="_blank" rel="noopener noreferrer">MariaDB</a></li>
+                        <li><a href="https://www.sqlite.org/index.html" target="_blank" rel="noopener noreferrer">SQLite</a></li>
+                    </ul>
+                    <h3>版本控制</h3>
+                    <ul>
+                        <li><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">Git</a></li>
+                        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://about.gitlab.com/install/" target="_blank" rel="noopener noreferrer">GitLab</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3><a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker</a></h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <h3>SSH / SFTP</h3>
+                    <ul>
+                        <li><a href="https://www.putty.org/" target="_blank" rel="noopener noreferrer">PuTTY</li>
+                        <li><a href="https://filezilla-project.org/" target="_blank" rel="noopener noreferrer">FileZilla</li>
+                    </ul>
+                    <h3>内网穿透</h3>
+                    <ul>
+                        <li><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreferrer">frp</li>
+                        <li><a href="https://github.com/inconshreveable/ngrok/tree/master" target="_blank" rel="noopener noreferrer">ngrok</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </body>
-    <script>
-        const { createApp } = Vue
-
-        createApp({
-            data() {
-                return {}
-            },
-            methods: {},
-        }).mount("#app")
-    </script>
 </html>

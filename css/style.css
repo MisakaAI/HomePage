@@ -364,3 +364,29 @@ img {
 .center {
     text-align: center !important;
 }
+
+.list {
+    padding: 0 20px 0 20px;
+    backdrop-filter: blur(2px);
+    max-width:500px;
+}
+
+.list li {
+    height: 2em;
+}
+
+.list a {
+    color: #198d44;
+}
+
+.list a:hover {
+    color: #2db15d;
+}
+
+.flex_row_wrap {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}

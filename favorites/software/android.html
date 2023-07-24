@@ -4,23 +4,38 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" />
-        <script src="js/vue.global.prod.js"></script>
-        <link rel="stylesheet" href="css/style.css" />
-        <title></title>
+        <script src="../../js/vue.global.prod.js"></script>
+        <link rel="stylesheet" href="../../css/style.css" />
+        <title>Android | 阿源的收藏夹</title>
     </head>
 
     <body>
         <div id="app">
+            <div class="head">
+                <div class="head_title">
+                    <h1>Android</h1>
+                </div>
+            </div>
+            <div class="list">
+            <h3>PC 端</h3>
+            <ul>
+                <li><a href="https://developer.android.google.cn/tools/adb" target="_blank" rel="noopener noreferrer"><b>ADB</b> <span class="name">Android Debug Bridge</span></a></li>
+                <li><a href="https://github.com/Genymobile/scrcpy" target="_blank" rel="noopener noreferrer"><b>scrcpy</b> <span class="name">安卓手机投屏到PC</span></a></li>
+            </ul>
+            <h3>APP</h3>
+            <ul>
+                <li>钱迹 <span class="name">记账</span></li>
+                <li>锤子便签 <span class="name">便签</span></li>
+                <li>Sketchbook <span class="name">绘画</span></li>
+                <li>JuiceSSH <span class="name">SSH</span></li>
+                <li>Snapseed <span class="name">修图</span></li>
+                <li>Pizza Boy GBA <span class="name">模拟器</span></li>
+                <li>Pulsar <span class="name">音乐</span></li>
+                <li>轻启动 <span class="name">跳过广告</span></li>
+                <li>盖得排行<span class="name"></li>
+                <li>什么值得买<span class="name"></li>
+            </ul>
+            </div>
         </div>
     </body>
-    <script>
-        const { createApp } = Vue
-
-        createApp({
-            data() {
-                return {}
-            },
-            methods: {},
-        }).mount("#app")
-    </script>
 </html>
