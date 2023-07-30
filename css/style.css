@@ -353,6 +353,8 @@ img {
 }
 
 .name {
+    margin: 0;
+    padding: 0;
     font-weight: normal;
     font-size: 0.8em;
     color: #888;
@@ -373,7 +375,8 @@ img {
 }
 
 .list li {
-    height: 2em;
+    height: auto;
+    margin-top: 5px;
 }
 
 .list a {
@@ -515,4 +518,21 @@ img {
 }
 .copy a {
     margin-left: 0.5em;
+}
+
+.note {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+}
+
+.note a {
+    color: #198d44;
+}
+
+.note a:hover {
+    color: #2db15d;
 }
