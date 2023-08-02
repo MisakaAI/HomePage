@@ -27,71 +27,23 @@
             </div>
             <h2>正在追番</h2>
             <div class="toolkit_card">
-                <div class="toolkit_flex" style="max-width: 1200px;">
+                <div class="toolkit_flex" style="max-width: 900px;">
                     <!-- a[target="_blank"]>div.anime>(div.anime_img>div.anime_days+img)+p.anime_name+(div.anime_container>div.anime_rate[style="width: 0%;"]+{0/12})*1 -->
-                    <!-- 1-8 2-16 3-25 4-33 5-41 6-50 7-58 8-66 9-75 10-83 11-91 12-100 -->
-                    <a href="https://bgm.tv/subject/401783" target="_blank">
+                    <template v-for="i in anime">
+                    <a :href="i.href" target="_blank">
                         <div class="anime">
                             <div class="anime_img">
-                                <div class="anime_days">五</div>
-                                <img src="https://lain.bgm.tv/pic/cover/l/83/14/401783_Q3m8a.jpg">
+                                <div class="anime_days" v-text="i.week"></div>
+                                <img :src="i.img">
                             </div>
-                            <p class="anime_name">租借女友 第三季</p>
+                            <p class="anime_name" v-text="i.name"></p>
                             <div class="anime_container">
-                                <div class="anime_rate" style="width: 0%;"></div>
-                                0/12
+                                <div class="anime_rate" :style="`width: ${i.now / i.max * 100}%`"></div>
+                                {{ i.now }}/{{ i.max }}
                             </div>
                         </div>
                     </a>
-                    <a href="https://bgm.tv/subject/425236" target="_blank">
-                        <div class="anime">
-                            <div class="anime_img">
-                                <div class="anime_days">六</div>
-                                <img src="https://lain.bgm.tv/r/400/pic/cover/l/bb/bf/425236_3CtyP.jpg">
-                            </div>
-                            <p class="anime_name">莱莎的炼金工房 ～常暗女王与秘密藏身处～</p>
-                            <div class="anime_container"><div class="anime_rate" style="width: 41%;"></div>5/12</div>
-                        </div>
-                    </a>
-                    <a href="https://bgm.tv/subject/414461" target="_blank">
-                        <div class="anime">
-                            <div class="anime_img">
-                                <div class="anime_days">日</div>
-                                <img src="https://lain.bgm.tv/pic/cover/l/c0/fe/414461_Shy9T.jpg">
-                            </div>
-                            <p class="anime_name">僵尸百分百～在成为僵尸前要做的100件事～</p>
-                            <div class="anime_container">
-                                <div class="anime_rate" style="width: 33%;"></div>4/12</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="toolkit_flex" style="max-width: 1200px;">
-                    <a href="https://bgm.tv/subject/408351" target="_blank">
-                        <div class="anime">
-                            <div class="anime_img">
-                                <div class="anime_days">一</div>
-                                <img src="https://lain.bgm.tv/r/400/pic/cover/l/34/17/408351_R44A4.jpg">
-                            </div>
-                            <p class="anime_name">满怀美梦的少年是现实主义者</p>
-                            <div class="anime_container">
-                                <div class="anime_rate" style="width: 0%;"></div>
-                                0/12
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://bgm.tv/subject/441233" target="_blank">
-                        <div class="anime">
-                            <div class="anime_img">
-                                <div class="anime_days">三</div>
-                                <img src="https://lain.bgm.tv/r/400/pic/cover/l/5a/24/441233_nJ7Do.jpg">
-                            </div>
-                            <p class="anime_name">总之就是非常可爱 女子高中篇</p>
-                            <div class="anime_container">
-                                <div class="anime_rate" style="width: 0%;"></div>
-                                0/4
-                            </div>
-                        </div>
-                    </a>
+                    </template>
                 </div>
             </div>
             <h2>已看动画</h2>
@@ -140,7 +92,50 @@
 
         createApp({
             data() {
-                return {}
+                return {
+                    anime: [
+                        {
+                            name: "租借女友 第三季",
+                            href: "https://bgm.tv/subject/401783",
+                            img: "https://lain.bgm.tv/pic/cover/l/83/14/401783_Q3m8a.jpg",
+                            week: "五",
+                            now: 0,
+                            max: 12
+                        },
+                        {
+                            name: "莱莎的炼金工房 ～常暗女王与秘密藏身处～",
+                            href: "https://bgm.tv/subject/425236",
+                            img: "https://lain.bgm.tv/r/400/pic/cover/l/bb/bf/425236_3CtyP.jpg",
+                            week: "六",
+                            now: 5,
+                            max: 12
+                        },
+                        {
+                            name: "僵尸百分百～在成为僵尸前要做的100件事～",
+                            href: "https://bgm.tv/subject/414461",
+                            img: "https://lain.bgm.tv/pic/cover/l/c0/fe/414461_Shy9T.jpg",
+                            week: "日",
+                            now: 4,
+                            max: 12
+                        },
+                        {
+                            name: "满怀美梦的少年是现实主义者",
+                            href: "https://bgm.tv/subject/408351",
+                            img: "https://lain.bgm.tv/r/400/pic/cover/l/34/17/408351_R44A4.jpg",
+                            week: "一",
+                            now: 0,
+                            max: 12
+                        },
+                        {
+                            name: "总之就是非常可爱 女子高中篇",
+                            href: "https://bgm.tv/subject/441233",
+                            img: "https://lain.bgm.tv/r/400/pic/cover/l/5a/24/441233_nJ7Do.jpg",
+                            week: "三",
+                            now: 0,
+                            max: 4
+                        },
+                    ]
+                }
             },
             methods: {},
         }).mount("#app")
